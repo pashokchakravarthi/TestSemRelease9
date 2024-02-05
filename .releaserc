@@ -1,0 +1,28 @@
+{
+  "repositoryUrl": "https://github.com/pashokchakravarthi/TestSemRelease9.git",
+  "branches": [
+    "main",
+    "develop",
+    "release/*"
+  ],
+  "plugins": [
+    {
+      "path": "@semantic-release/commit-analyzer",
+      "preset": "conventionalcommits"
+    },
+    {
+      "path": "@semantic-release/release-notes-generator"
+    },
+    {
+      "path": "@semantic-release/changelog"
+    },
+    {
+      "path": "@semantic-release/exec",
+      "prepareCmd": "echo next version: ${nextRelease.version}"
+    },
+    {
+      "path": "@semantic-release/git",
+      "message": "chore(release): ${nextRelease.version}\n\n${nextRelease.notes}"
+    }
+  ]
+}
