@@ -2,7 +2,6 @@
   "repositoryUrl": "https://github.com/pashokchakravarthi/TestSemRelease9.git",
   "branches": [
     "main",
-    "develop",
     {
       "name": "develop",      
       "prerelease": false,
