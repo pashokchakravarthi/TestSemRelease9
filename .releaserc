@@ -3,7 +3,16 @@
   "branches": [
     "main",
     "develop",
-    "release/*"
+    {
+      "name": "release/v+([0-9])?(.{+([0-9]),x}).x",
+      "range":"${name.replace('release/v', '')}",
+      "prerelease": false
+    },
+    {
+      "name": "hotfix/v+([0-9])?(.{+([0-9]),x}).x",
+      "range":"${name.replace('hotfix/v', '')}",
+      "prerelease": false
+    }
   ],
   "plugins": [
     {
